@@ -16,6 +16,7 @@ class Dino < Formula
   depends_on "cmake" => :build
   depends_on "ninja" => :build
   depends_on "vala" => :build
+  depends_on "zsh" => :build
   depends_on "adwaita-icon-theme"
   depends_on "gettext"
   depends_on "glib"
@@ -37,7 +38,7 @@ class Dino < Formula
     system "./configure", "--with-tests", "--release", "--disable-fast-vapi"
     system "make"
     system "make", "install"
-    system "/bin/zsh", "-e", "-x", "-c",
+    system "zsh", "-e", "-x", "-c",
         "for plugin in #{lib}/dino/plugins/*.dylib; do mv ${plugin} ${plugin%.dylib}.so; done"
   end
 
