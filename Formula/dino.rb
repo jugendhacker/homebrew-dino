@@ -5,6 +5,14 @@ class Dino < Formula
   sha256 "3e076f51c65967cfd51cbabf0b7249a7ea36e61afa25f93f82b9348466b2b864"
   license "GPL-3.0-or-later"
 
+  head do
+    url "https://github.com/dino/dino.git"
+    depends_on "gspell"
+    depends_on "gst-plugins-base"
+    depends_on "libnice"
+    depends_on "srtp"
+  end
+
   depends_on "cmake" => :build
   depends_on "ninja" => :build
   depends_on "vala" => :build
@@ -13,20 +21,15 @@ class Dino < Formula
   depends_on "glib"
   depends_on "glib-networking"
   depends_on "gpgme"
-  depends_on "gspell"
-  depends_on "gst-plugins-base"
   depends_on "gtk+3"
   depends_on "icu4c"
   depends_on "libgcrypt"
   depends_on "libgee"
-  depends_on "libgpg-error"
-  depends_on "libnice"
   depends_on "libsignal-protocol-c"
   depends_on "libsoup@2"
   depends_on "libxml2"
   depends_on "qrencode"
   depends_on "sqlite"
-  depends_on "srtp"
 
   def install
     ENV["VALACFLAGS"] = "--disable-warnings"
