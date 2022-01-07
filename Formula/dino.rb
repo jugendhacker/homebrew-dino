@@ -5,6 +5,13 @@ class Dino < Formula
   sha256 "3e076f51c65967cfd51cbabf0b7249a7ea36e61afa25f93f82b9348466b2b864"
   license "GPL-3.0-or-later"
 
+  bottle do
+    root_url "https://github.com/jugendhacker/homebrew-dino/releases/download/dino-0.2.2"
+    rebuild 1
+    sha256 catalina:     "13238f3caf069829f92629a1f4985a643b6f5eb5c26f5e688f5198b02dd399da"
+    sha256 x86_64_linux: "6c55940416f528d3f7be5b9395811e0f7f16a127272a55bd899977b1bf782a20"
+  end
+
   head do
     url "https://github.com/dino/dino.git"
     depends_on "gspell"
