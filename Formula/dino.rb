@@ -1,8 +1,8 @@
 class Dino < Formula
   desc "Modern XMPP (\"Jabber\") Chat Client using GTK+/Vala"
   homepage "https://dino.im/"
-  url "https://github.com/dino/dino/releases/download/v0.2.2/dino-0.2.2.tar.gz"
-  sha256 "3e076f51c65967cfd51cbabf0b7249a7ea36e61afa25f93f82b9348466b2b864"
+  url "https://github.com/dino/dino/releases/download/v0.3.0/dino-0.3.0.tar.gz"
+  sha256 "3970cacf53ad328bb848dd19711826797fb8aed510e9fbf7ffac2ad7cb11dc1e"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -16,6 +16,7 @@ class Dino < Formula
     url "https://github.com/dino/dino.git"
     depends_on "gspell"
     depends_on "gst-plugins-base"
+    depends_on "gst-plugins-good"
     depends_on "libnice"
     depends_on "srtp"
   end
@@ -25,6 +26,7 @@ class Dino < Formula
   depends_on "vala" => :build
   depends_on "zsh" => :build if OS.mac?
   depends_on "adwaita-icon-theme"
+  depends_on "cairo"
   depends_on "gettext"
   depends_on "glib"
   depends_on "glib-networking"
